@@ -1,3 +1,22 @@
+# Secrets
 .env
-.venv
+
+# Python virtual environment
+.venv/
+
+# Python cache
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Database (runtime data — never commit)
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
