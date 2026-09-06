@@ -397,7 +397,7 @@ nano .env
 Paste (no quotes around values):
 
 ```
-BOT_TOKEN=8858439420:AAFzBdxarF7XG8x4sQr4v1PCIDqkcODeAiA
+BOT_TOKEN=<YOUR_BOT_TOKEN>
 CHAT_ID=<YOUR_TELEGRAM_CHAT_ID>
 ```
 
