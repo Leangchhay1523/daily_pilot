@@ -180,26 +180,49 @@ These messages should remain in the Telegram chat as history.
 
 ---
 
-## 5. Basic Commands
+## 5. Commands
 
-Initial command ideas:
+### Task Management
 
-```text
-/start
-/help
+| Command   | Description                                              |
+| --------- | -------------------------------------------------------- |
+| `/tasks`  | List all tasks (active 🟢 and inactive 🔴)               |
+| `/add`    | Add a new task — multi-step conversation                 |
+| `/edit`   | Edit an existing task (name, duration, or toggle active) |
+| `/delete` | Delete a task (with confirmation)                        |
 
-/tasks
-/add
-/edit
-/delete
+### Daily Tracking
 
-/today
-/update
+| Command    | Description                                                     |
+| ---------- | --------------------------------------------------------------- |
+| `/today`   | Show today's plan with current statuses                         |
+| `/update`  | Interactive status updater — tap Done / Partial / Skip per task |
+| `/summary` | Today's results with score bar, streaks, and journal note       |
 
-/settings
-```
+### Progress & Analytics
 
-The exact command structure can be changed during implementation if a better interaction design is found.
+| Command  | Description                                            |
+| -------- | ------------------------------------------------------ |
+| `/week`  | 7-day completion grid for all active tasks             |
+| `/stats` | 30-day analytics — completion rates, best day, streaks |
+
+### Journal
+
+| Command | Description                              |
+| ------- | ---------------------------------------- |
+| `/note` | Write or edit today's daily journal note |
+
+### General
+
+| Command     | Description                                     |
+| ----------- | ----------------------------------------------- |
+| `/start`    | Start the bot and enable scheduled reminders    |
+| `/help`     | Show all commands                               |
+| `/settings` | View or change morning / evening reminder times |
+| `/cancel`   | Cancel any active conversation                  |
+
+> All command and interaction messages auto-delete after a short time to keep the chat clean.
+> Scheduled notifications (morning plan, evening check-in) are persistent and never deleted.
 
 ---
 
@@ -399,24 +422,31 @@ The stack can be changed later if there is a strong reason.
 
 # MVP Scope
 
-The first version should only focus on:
-
-- [ ] Telegram bot setup
-- [ ] `/start`
-- [ ] Add task/habit
-- [ ] Edit task/habit
-- [ ] Delete task/habit
-- [ ] List active tasks
-- [ ] Duration for each task
-- [ ] Daily 9 AM reminder
-- [ ] Daily task status
-- [ ] End-of-day check-in
-- [ ] Persistent daily history
-- [ ] Temporary interactive messages
-- [ ] SQLite database
-- [ ] Background scheduler
-- [ ] Deploy to Oracle Cloud
+- [x] Telegram bot setup
+- [x] `/start`
+- [x] Add task/habit
+- [x] Edit task/habit
+- [x] Delete task/habit
+- [x] List active tasks
+- [x] Duration for each task
+- [x] Daily 9 AM reminder
+- [x] Daily task status
+- [x] End-of-day check-in
+- [x] Persistent daily history
+- [x] Temporary interactive messages (auto-delete)
+- [x] SQLite database
+- [x] Background scheduler
+- [ ] Deploy to Oracle Cloud / GCP
 - [ ] Run continuously
+
+### Also Implemented (beyond MVP)
+
+- [x] `/summary` — daily results with score bar
+- [x] `/week` — 7-day completion grid
+- [x] `/stats` — 30-day analytics and streaks
+- [x] `/note` — daily journal entry
+- [x] Habit streak tracker (🔥) across all views
+- [x] Streaks shown in morning reminder
 
 ---
 
